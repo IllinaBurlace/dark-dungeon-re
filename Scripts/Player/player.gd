@@ -3,6 +3,9 @@ extends CharacterBody2D
 
 var current_state: State
 
+@onready
+var sprite: AnimatedSprite2D = $Sprite2D
+
 func _ready() -> void:
 	current_state = PlayerStates.Idle.new()
 	current_state.parent = self

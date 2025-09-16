@@ -1,39 +1,46 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgxdmlxphdcg6"]
+[gd_scene load_steps=9 format=3 uid="uid://bgxdmlxphdcg6"]
 
-[ext_resource type="Script" uid="uid://dypmawpf0vjys" path="res://Scripts/Player/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://bcnvybml58nqg" path="res://Assets/Sprite.png" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://byadkuv6huhvu" path="res://Scripts/Player/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://clcciclw5k75i" path="res://Assets/Sprite.png" id="2_cvnsp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 0, 32, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
-region = Rect2(0, 0, 24, 43)
+region = Rect2(0, 38, 32, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
 atlas = ExtResource("2_cvnsp")
-region = Rect2(0, 43, 24, 43)
+region = Rect2(0, 76, 32, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
 atlas = ExtResource("2_cvnsp")
-region = Rect2(0, 86, 24, 43)
+region = Rect2(0, 114, 32, 38)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x3wgy"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}, {
+"duration": 0.61,
 "texture": SubResource("AtlasTexture_6t5aa")
 }, {
-"duration": 1.0,
+"duration": 0.61,
 "texture": SubResource("AtlasTexture_vgqql")
 }, {
-"duration": 1.0,
+"duration": 0.61,
 "texture": SubResource("AtlasTexture_fkybt")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"Idle",
+"speed": 4.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
-radius = 1.0
+radius = 2.0
 height = 11.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -43,9 +50,10 @@ script = ExtResource("1_cvnsp")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -0.5)
 sprite_frames = SubResource("SpriteFrames_x3wgy")
-frame_progress = 0.662712
+animation = &"Idle"
+frame_progress = 0.12128108
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 20)
+position = Vector2(-4, 17)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cvnsp")

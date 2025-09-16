@@ -5,6 +5,7 @@ class Idle:
 	extends State
 	
 	func enter() -> void:
+		parent.sprite.play("Idle")
 		parent.velocity = Vector2.ZERO
 	
 	func state() -> State:
