@@ -40,8 +40,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
-radius = 2.0
-height = 11.0
+radius = 6.0
+height = 38.0
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -49,11 +49,12 @@ script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -0.5)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_x3wgy")
 animation = &"Idle"
 frame_progress = 0.12128108
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, 17)
+position = Vector2(-14, 69.5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_cvnsp")
