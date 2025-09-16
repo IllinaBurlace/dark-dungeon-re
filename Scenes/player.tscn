@@ -9,15 +9,15 @@ region = Rect2(0, 0, 32, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
-region = Rect2(0, 38, 32, 38)
+region = Rect2(0, 40, 32, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
 atlas = ExtResource("2_cvnsp")
-region = Rect2(0, 76, 32, 38)
+region = Rect2(0, 80, 32, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
 atlas = ExtResource("2_cvnsp")
-region = Rect2(0, 114, 32, 38)
+region = Rect2(0, 120, 32, 38)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x3wgy"]
 animations = [{
@@ -25,13 +25,13 @@ animations = [{
 "duration": 2.0,
 "texture": SubResource("AtlasTexture_cvnsp")
 }, {
-"duration": 0.61,
+"duration": 0.6,
 "texture": SubResource("AtlasTexture_6t5aa")
 }, {
-"duration": 0.61,
+"duration": 0.6,
 "texture": SubResource("AtlasTexture_vgqql")
 }, {
-"duration": 0.61,
+"duration": 0.6,
 "texture": SubResource("AtlasTexture_fkybt")
 }],
 "loop": true,
@@ -52,7 +52,7 @@ position = Vector2(0, -0.5)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_x3wgy")
 animation = &"Idle"
-frame_progress = 0.12128108
+frame_progress = 0.29163745
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-14, 69.5)
